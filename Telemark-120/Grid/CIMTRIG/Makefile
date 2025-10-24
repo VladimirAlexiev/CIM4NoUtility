@@ -1,17 +1,15 @@
-JSON1 = $(wildcard ../CIMJSON-LD/*.geojson)
-TTL   = $(patsubst ../CIMJSON-LD/%.geojson,%.ttl, $(JSON1))
+FIXME = ../../../../Inst4CIM-KG/rdf-improved
+JSON  = $(wildcard ../CIMJSON-LD/*.jsonld)
+TRIG  = $(patsubst ../CIMJSON-LD/%.jsonld,%.trig, $(JSON))
 
-JSON2 = $(wildcard ../CIMJSON-LD/*.jsonld)
-TRIG  = $(patsubst ../CIMJSON-LD/%.jsonld,%.trig, $(JSON2))
+all: $(TRIG)
 
-
-all: $(TTL) $(TRIG)
-
-%.ttl: ../CIMJSON-LD/%.geojson
-	riot.bat --syntax jsonld --formatted ttl $^ > temp.ttl
-	owl.bat write temp.ttl $*.ttl
-	rm temp.ttl
+echo:
+	@echo $(TRIG)
 
 %.trig: ../CIMJSON-LD/%.jsonld
-	riot.bat --syntax jsonld --formatted trig $^ > $@
+	riot.bat --syntax jsonld --formatted trig $^ > temp.trig
+	update.bat --update=$(FIXME)/fix-datatypes-and-model.ru --data=temp.trig --dump > $@
+	rm temp.trig
 
+# Important: Telemark-120-WattApp-GL is only available in GEOJSON not JSON-LD. So the trig file is made by hand, not with the above

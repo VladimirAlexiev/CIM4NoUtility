@@ -1,40 +1,51 @@
- PREFIX cim:     <https://cim.ucaiug.io/ns#>
-PREFIX dcat:    <http://www.w3.org/ns/dcat#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX eu:      <https://cim.ucaiug.io/ns/eu#>
-PREFIX prov:    <http://www.w3.org/ns/prov#>
-PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX cim:      <https://cim.ucaiug.io/ns#>
+PREFIX dcat:     <http://www.w3.org/ns/dcat#>
+PREFIX dcat-cim: <https://cim4.eu/ns/dcat-cim#>
+PREFIX dct:      <http://purl.org/dc/terms/>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX dm:       <http://iec.ch/TC57/61970-552/DifferenceModel/1#>
+PREFIX entsoe2:  <http://entsoe.eu/CIM/SchemaExtension/3/2#>
+PREFIX eu:       <https://cim.ucaiug.io/ns/eu#>
+PREFIX eumd:     <https://cim4.eu/ns/Metadata-European#>
+PREFIX icim:     <http://iec.ch/TC57/2013/CIM-schema-cim16-info#>
+PREFIX json-ld:  <https://www.w3.org/ns/json-ld#>
+PREFIX md:       <http://iec.ch/TC57/61970-552/ModelDescription/1#>
+PREFIX nc:       <https://cim4.eu/ns/nc#>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX pti:      <http://www.pti-us.com/PTI_CIM-schema-cim16#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfg:     <http://www.w3.org/2004/03/trix/rdfg-1/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 <urn:uuid:bd53cf0a-2e2f-4230-a591-0233290b5f9b>
-        dcterms:title  "DIGIN" .
+        dct:title  "DIGIN" .
 
-<https://creativecommons.org/licenses/by-nc-sa/4.0/>
-        dcterms:title  "CC BY-NC-SA 4.0" .
-
-<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
-        dcterms:title  "PUBLIC" .
-
-<urn:uuid:309fe4e7-d477-44e1-a495-de43562b3504> {
-    <urn:uuid:309fe4e7-d477-44e1-a495-de43562b3504>
+<urn:uuid:309fe4e7-d477-44e1-a495-de43562b3504>
         rdf:type              dcat:Dataset;
-        dcterms:accessRights  <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
-        dcterms:conformsTo    <http://iec.ch/TC57/CIM/AssetCatalogue/2/0>;
-        dcterms:description   "DIGIN10 Manufacture 1 (M1) Asset Catalogue Model"@en;
-        dcterms:issued        "2022-10-28T13:37:00Z"^^xsd:date;
-        dcterms:license       <https://creativecommons.org/licenses/by-nc-sa/4.0/>;
-        dcterms:publisher     <urn:uuid:bd53cf0a-2e2f-4230-a591-0233290b5f9b>;
-        dcterms:rights        "© 2023 Copyright";
-        dcterms:rightsHolder  "DIGIN";
-        dcterms:spatial       <https://diginenergi.no/DIGIN10/AssetCatalogue>;
-        dcterms:temporal      [ rdf:type        dcterms:PeriodOfTime;
+        dct:accessRights      <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+        dct:conformsTo        <http://iec.ch/TC57/CIM/AssetCatalogue/2/0>;
+        dct:description       "DIGIN10 Manufacture 1 (M1) Asset Catalogue Model"@en;
+        dct:issued            "2022-10-28T13:37:00Z"^^xsd:date;
+        dct:license           <https://creativecommons.org/licenses/by-nc-sa/4.0/>;
+        dct:publisher         <urn:uuid:bd53cf0a-2e2f-4230-a591-0233290b5f9b>;
+        dct:rights            "© 2023 Copyright";
+        dct:rightsHolder      "DIGIN";
+        dct:spatial           <https://diginenergi.no/DIGIN10/AssetCatalogue>;
+        dct:temporal          [ rdf:type        dct:PeriodOfTime;
                                 dcat:startDate  "2022-10-28T13:37:00Z"^^xsd:dateTime
                               ];
-        dcterms:title         "DIGIN10-30-M1_AC";
+        dct:title             "DIGIN10-30-M1_AC";
         dcat:isVersionOf      <https://digin.no/baseprofile/DIGIN10-30-M1_AC>;
         dcat:keyword          "AC";
         prov:generatedAtTime  "2023-10-26T10:35:31Z"^^xsd:dateTime .
 
+<https://creativecommons.org/licenses/by-nc-sa/4.0/>
+        dct:title  "CC BY-NC-SA 4.0" .
+
+<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
+        dct:title  "PUBLIC" .
+
+<urn:uuid:309fe4e7-d477-44e1-a495-de43562b3504> {
     <urn:uuid:df774997-6a8e-47ca-9cd5-30ce2a85abf0>
             rdf:type                   cim:ProductAssetModel;
             cim:IdentifiedObject.description
@@ -56,6 +67,19 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
             cim:ProductAssetModel.weightTotal
                     115 .
     
+    <urn:uuid:5462d46a-9ee5-4d09-9ac2-9f97933caa4d>
+            rdf:type                   cim:PowerTransformerInfo;
+            cim:IdentifiedObject.mRID  "5462d46a-9ee5-4d09-9ac2-9f97933caa4d";
+            cim:IdentifiedObject.name  "Engene 132-22 KV PowerTransformerInfo" .
+    
+    <urn:uuid:6d4b7fa0-aa6e-4e82-a88e-c14b84370eec>
+            rdf:type                        cim:Manufacturer;
+            cim:IdentifiedObject.aliasName  "RBE";
+            cim:IdentifiedObject.mRID       "b0c1754b-187c-49fa-8159-6fd2f4f918ad";
+            cim:IdentifiedObject.name       "Reuters Borg Elektro";
+            cim:Manufacturer.ProductAssetModel
+                    <urn:uuid:df774997-6a8e-47ca-9cd5-30ce2a85abf0> .
+    
     <urn:uuid:d25f35ca-69fb-4c06-905b-67ec532e5f14>
             rdf:type                        cim:CableInfo;
             cim:CableInfo.constructionKind  cim:CableConstructionKind.stranded;
@@ -69,7 +93,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
             cim:WireInfo.insulationMaterial
                     cim:WireInsulationKind.other;
             cim:WireInfo.material           cim:WireMaterialKind.aluminum;
-            cim:WireInfo.rAC25              320;
+            cim:WireInfo.rAC25              "320"^^xsd:float;
             cim:WireInfo.radius             95;
             cim:WireInfo.ratedCurrent       220 .
     
@@ -81,17 +105,4 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
                     "Pricing for RTU skap for småkraftverk";
             cim:IdentifiedObject.mRID  "99e19919-b030-4742-8609-f1230681333d";
             cim:IdentifiedObject.name  "Price_RS5970P" .
-    
-    <urn:uuid:6d4b7fa0-aa6e-4e82-a88e-c14b84370eec>
-            rdf:type                        cim:Manufacturer;
-            cim:IdentifiedObject.aliasName  "RBE";
-            cim:IdentifiedObject.mRID       "b0c1754b-187c-49fa-8159-6fd2f4f918ad";
-            cim:IdentifiedObject.name       "Reuters Borg Elektro";
-            cim:Manufacturer.ProductAssetModel
-                    <urn:uuid:df774997-6a8e-47ca-9cd5-30ce2a85abf0> .
-    
-    <urn:uuid:5462d46a-9ee5-4d09-9ac2-9f97933caa4d>
-            rdf:type                   cim:PowerTransformerInfo;
-            cim:IdentifiedObject.mRID  "5462d46a-9ee5-4d09-9ac2-9f97933caa4d";
-            cim:IdentifiedObject.name  "Engene 132-22 KV PowerTransformerInfo" .
 }

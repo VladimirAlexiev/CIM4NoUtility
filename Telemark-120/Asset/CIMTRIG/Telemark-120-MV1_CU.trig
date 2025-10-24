@@ -1,41 +1,52 @@
-PREFIX cim:     <https://cim.ucaiug.io/ns#>
-PREFIX dcat:    <http://www.w3.org/ns/dcat#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX eu:      <https://cim.ucaiug.io/ns/eu#>
-PREFIX prov:    <http://www.w3.org/ns/prov#>
-PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX cim:      <https://cim.ucaiug.io/ns#>
+PREFIX dcat:     <http://www.w3.org/ns/dcat#>
+PREFIX dcat-cim: <https://cim4.eu/ns/dcat-cim#>
+PREFIX dct:      <http://purl.org/dc/terms/>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX dm:       <http://iec.ch/TC57/61970-552/DifferenceModel/1#>
+PREFIX entsoe2:  <http://entsoe.eu/CIM/SchemaExtension/3/2#>
+PREFIX eu:       <https://cim.ucaiug.io/ns/eu#>
+PREFIX eumd:     <https://cim4.eu/ns/Metadata-European#>
+PREFIX icim:     <http://iec.ch/TC57/2013/CIM-schema-cim16-info#>
+PREFIX json-ld:  <https://www.w3.org/ns/json-ld#>
+PREFIX md:       <http://iec.ch/TC57/61970-552/ModelDescription/1#>
+PREFIX nc:       <https://cim4.eu/ns/nc#>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX pti:      <http://www.pti-us.com/PTI_CIM-schema-cim16#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfg:     <http://www.w3.org/2004/03/trix/rdfg-1/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 <urn:uuid:bd53cf0a-2e2f-4230-a591-0233290b5f9b>
-        dcterms:title  "DIGIN" .
+        dct:title  "DIGIN" .
 
 <https://creativecommons.org/licenses/by-nc-sa/4.0/>
-        dcterms:title  "CC BY-NC-SA 4.0" .
+        dct:title  "CC BY-NC-SA 4.0" .
 
-<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
-        dcterms:title  "PUBLIC" .
-
-<urn:uuid:5f21a6a1-1d98-45f0-89f1-e4d7aa34691a> {
-    <urn:uuid:5f21a6a1-1d98-45f0-89f1-e4d7aa34691a>
+<urn:uuid:5f21a6a1-1d98-45f0-89f1-e4d7aa34691a>
         rdf:type              dcat:Dataset;
-        dcterms:accessRights  <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
-        dcterms:conformsTo    <http://iec.ch/TC57/CIM/Customers/2/0>;
-        dcterms:description   "DIGIN10 CGMES v3.0 Medium Voltage 1 (MV1) Customer (CU) Model"@en;
-        dcterms:issued        "2022-03-30T16:26:37.958Z"^^xsd:date;
-        dcterms:license       <https://creativecommons.org/licenses/by-nc-sa/4.0/>;
-        dcterms:publisher     <urn:uuid:bd53cf0a-2e2f-4230-a591-0233290b5f9b>;
-        dcterms:references    <urn:uuid:c47d4310-b8ee-480d-9cf3-e53a81630981>;
-        dcterms:rights        "© 2023 Copyright";
-        dcterms:rightsHolder  "DIGIN";
-        dcterms:spatial       <https://diginenergi.no/DIGIN10/LV1>;
-        dcterms:temporal      [ rdf:type        dcterms:PeriodOfTime;
+        dct:accessRights      <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+        dct:conformsTo        <http://iec.ch/TC57/CIM/Customers/2/0>;
+        dct:description       "DIGIN10 CGMES v3.0 Medium Voltage 1 (MV1) Customer (CU) Model"@en;
+        dct:issued            "2022-03-30T16:26:37.958Z"^^xsd:date;
+        dct:license           <https://creativecommons.org/licenses/by-nc-sa/4.0/>;
+        dct:publisher         <urn:uuid:bd53cf0a-2e2f-4230-a591-0233290b5f9b>;
+        dct:references        <urn:uuid:c47d4310-b8ee-480d-9cf3-e53a81630981>;
+        dct:rights            "© 2023 Copyright";
+        dct:rightsHolder      "DIGIN";
+        dct:spatial           <https://diginenergi.no/DIGIN10/LV1>;
+        dct:temporal          [ rdf:type        dct:PeriodOfTime;
                                 dcat:startDate  "2022-03-30T23:00:00Z"^^xsd:dateTime
                               ];
-        dcterms:title         "DIGIN10-30-MV1_CU";
+        dct:title             "DIGIN10-30-MV1_CU";
         dcat:isVersionOf      <https://digin.no/baseprofile/DIGIN10-30-MV1_CU>;
         dcat:keyword          "CU";
         prov:generatedAtTime  "2023-10-26T10:35:31Z"^^xsd:dateTime .
 
+<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
+        dct:title  "PUBLIC" .
+
+<urn:uuid:5f21a6a1-1d98-45f0-89f1-e4d7aa34691a> {
     <urn:uuid:106944d1-3139-41a8-a972-5bf8be1a1c5b>
             rdf:type                        cim:UsagePoint;
             cim:IdentifiedObject.description

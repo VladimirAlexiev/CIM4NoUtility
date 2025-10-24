@@ -1,77 +1,53 @@
-PREFIX cim:     <https://cim.ucaiug.io/ns#>
-PREFIX dcat:    <http://www.w3.org/ns/dcat#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX eu:      <https://cim.ucaiug.io/ns/eu#>
-PREFIX prov:    <http://www.w3.org/ns/prov#>
-PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX cim:      <https://cim.ucaiug.io/ns#>
+PREFIX dcat:     <http://www.w3.org/ns/dcat#>
+PREFIX dcat-cim: <https://cim4.eu/ns/dcat-cim#>
+PREFIX dct:      <http://purl.org/dc/terms/>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX dm:       <http://iec.ch/TC57/61970-552/DifferenceModel/1#>
+PREFIX entsoe2:  <http://entsoe.eu/CIM/SchemaExtension/3/2#>
+PREFIX eu:       <https://cim.ucaiug.io/ns/eu#>
+PREFIX eumd:     <https://cim4.eu/ns/Metadata-European#>
+PREFIX icim:     <http://iec.ch/TC57/2013/CIM-schema-cim16-info#>
+PREFIX json-ld:  <https://www.w3.org/ns/json-ld#>
+PREFIX md:       <http://iec.ch/TC57/61970-552/ModelDescription/1#>
+PREFIX nc:       <https://cim4.eu/ns/nc#>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX pti:      <http://www.pti-us.com/PTI_CIM-schema-cim16#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfg:     <http://www.w3.org/2004/03/trix/rdfg-1/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 <urn:uuid:bd53cf0a-2e2f-4230-a591-0233290b5f9b>
-        dcterms:title  "DIGIN" .
+        dct:title  "DIGIN" .
 
 <https://creativecommons.org/licenses/by-nc-sa/4.0/>
-        dcterms:title  "CC BY-NC-SA 4.0" .
+        dct:title  "CC BY-NC-SA 4.0" .
 
-<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
-        dcterms:title  "PUBLIC" .
-
-<urn:uuid:5ad50f29-f3e5-4cf9-8519-cef17d71f8de> {
-    <urn:uuid:5ad50f29-f3e5-4cf9-8519-cef17d71f8de>
+<urn:uuid:5ad50f29-f3e5-4cf9-8519-cef17d71f8de>
         rdf:type              dcat:Dataset;
-        dcterms:accessRights  <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
-        dcterms:description   "DIGIN10 CGMES v3.0 Geographical Region Reference model"@en;
-        dcterms:issued        "2022-04-01T08:55:55"^^xsd:date;
-        dcterms:license       <https://creativecommons.org/licenses/by-nc-sa/4.0/>;
-        dcterms:publisher     <urn:uuid:bd53cf0a-2e2f-4230-a591-0233290b5f9b>;
-        dcterms:rights        "© 2023 Copyright";
-        dcterms:rightsHolder  "DIGIN";
-        dcterms:spatial       <http://energy.referencedata.eu/CGMES>;
-        dcterms:title         "DIGIN10-30-GeographicalRegion_RD";
+        dct:accessRights      <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+        dct:description       "DIGIN10 CGMES v3.0 Geographical Region Reference model"@en;
+        dct:issued            "2022-04-01T08:55:55"^^xsd:date;
+        dct:license           <https://creativecommons.org/licenses/by-nc-sa/4.0/>;
+        dct:publisher         <urn:uuid:bd53cf0a-2e2f-4230-a591-0233290b5f9b>;
+        dct:rights            "© 2023 Copyright";
+        dct:rightsHolder      "DIGIN";
+        dct:spatial           <http://energy.referencedata.eu/CGMES>;
+        dct:title             "DIGIN10-30-GeographicalRegion_RD";
         dcat:isVersionOf      <https://digin.no/baseprofile/DIGIN10-30-GeographicalRegion_RD>;
         dcat:keyword          "RD";
         prov:generatedAtTime  "2023-10-26T10:35:31Z"^^xsd:dateTime .
-    <urn:uuid:f17696cf-9aeb-11e5-91da-b8763fd99c5f>
-            rdf:type                   cim:SubGeographicalRegion;
-            cim:IdentifiedObject.description
-                    "SE4 Bidding Zone";
-            cim:IdentifiedObject.mRID  "f17696cf-9aeb-11e5-91da-b8763fd99c5f";
-            cim:IdentifiedObject.name  "SE4 SGR";
-            cim:SubGeographicalRegion.Region
-                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
-    
+
+<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
+        dct:title  "PUBLIC" .
+
+<urn:uuid:5ad50f29-f3e5-4cf9-8519-cef17d71f8de> {
     <urn:uuid:f17696b3-9aeb-11e5-91da-b8763fd99c5f>
             rdf:type                   cim:SubGeographicalRegion;
             cim:IdentifiedObject.description
                     "FI1 Bidding Zone";
             cim:IdentifiedObject.mRID  "f17696b3-9aeb-11e5-91da-b8763fd99c5f";
             cim:IdentifiedObject.name  "FI1 SGR";
-            cim:SubGeographicalRegion.Region
-                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
-    
-    <urn:uuid:f17696a3-9aeb-11e5-91da-b8763fd99c5f>
-            rdf:type                   cim:SubGeographicalRegion;
-            cim:IdentifiedObject.description
-                    "NO4 Bidding Zone";
-            cim:IdentifiedObject.mRID  "f17696a3-9aeb-11e5-91da-b8763fd99c5f";
-            cim:IdentifiedObject.name  "NO4 SGR";
-            cim:SubGeographicalRegion.Region
-                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
-    
-    <urn:uuid:f1769699-9aeb-11e5-91da-b8763fd99c5f>
-            rdf:type                   cim:SubGeographicalRegion;
-            cim:IdentifiedObject.description
-                    "NO3 Bidding Zone";
-            cim:IdentifiedObject.mRID  "f1769699-9aeb-11e5-91da-b8763fd99c5f";
-            cim:IdentifiedObject.name  "NO3 SGR";
-            cim:SubGeographicalRegion.Region
-                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
-    
-    <urn:uuid:f176965f-9aeb-11e5-91da-b8763fd99c5f>
-            rdf:type                   cim:SubGeographicalRegion;
-            cim:IdentifiedObject.description
-                    "NO2 Bidding Zone";
-            cim:IdentifiedObject.mRID  "f176965f-9aeb-11e5-91da-b8763fd99c5f";
-            cim:IdentifiedObject.name  "NO2 SGR";
             cim:SubGeographicalRegion.Region
                     <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
     
@@ -84,14 +60,12 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
             cim:SubGeographicalRegion.Region
                     <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
     
-    <urn:uuid:f1769609-9aeb-11e5-91da-b8763fd99c5f>
-            rdf:type                   cim:SubGeographicalRegion;
+    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4>
+            rdf:type                   cim:GeographicalRegion;
             cim:IdentifiedObject.description
-                    "NO1 Bidding Zone";
-            cim:IdentifiedObject.mRID  "f1769609-9aeb-11e5-91da-b8763fd99c5f";
-            cim:IdentifiedObject.name  "NO1 SGR";
-            cim:SubGeographicalRegion.Region
-                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
+                    "Nordic";
+            cim:IdentifiedObject.mRID  "2dd9048c-bdfb-11e5-94fa-c8f73332c8f4";
+            cim:IdentifiedObject.name  "NO" .
     
     <urn:uuid:f17695cd-9aeb-11e5-91da-b8763fd99c5f>
             rdf:type                   cim:SubGeographicalRegion;
@@ -99,24 +73,6 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
                     "SE1 Bidding Zone";
             cim:IdentifiedObject.mRID  "f17695cd-9aeb-11e5-91da-b8763fd99c5f";
             cim:IdentifiedObject.name  "SE1 SGR";
-            cim:SubGeographicalRegion.Region
-                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
-    
-    <urn:uuid:f17695c3-9aeb-11e5-91da-b8763fd99c5f>
-            rdf:type                   cim:SubGeographicalRegion;
-            cim:IdentifiedObject.description
-                    "SE2 Bidding Zone";
-            cim:IdentifiedObject.mRID  "f17695c3-9aeb-11e5-91da-b8763fd99c5f";
-            cim:IdentifiedObject.name  "SE2 SGR";
-            cim:SubGeographicalRegion.Region
-                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
-    
-    <urn:uuid:f17695af-9aeb-11e5-91da-b8763fd99c5f>
-            rdf:type                   cim:SubGeographicalRegion;
-            cim:IdentifiedObject.description
-                    "SE3 Bidding Zone";
-            cim:IdentifiedObject.mRID  "f17695af-9aeb-11e5-91da-b8763fd99c5f";
-            cim:IdentifiedObject.name  "SE3 SGR";
             cim:SubGeographicalRegion.Region
                     <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
     
@@ -129,10 +85,66 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
             cim:SubGeographicalRegion.Region
                     <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
     
-    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4>
-            rdf:type                   cim:GeographicalRegion;
+    <urn:uuid:f17696a3-9aeb-11e5-91da-b8763fd99c5f>
+            rdf:type                   cim:SubGeographicalRegion;
             cim:IdentifiedObject.description
-                    "Nordic";
-            cim:IdentifiedObject.mRID  "2dd9048c-bdfb-11e5-94fa-c8f73332c8f4";
-            cim:IdentifiedObject.name  "NO" .
+                    "NO4 Bidding Zone";
+            cim:IdentifiedObject.mRID  "f17696a3-9aeb-11e5-91da-b8763fd99c5f";
+            cim:IdentifiedObject.name  "NO4 SGR";
+            cim:SubGeographicalRegion.Region
+                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
+    
+    <urn:uuid:f176965f-9aeb-11e5-91da-b8763fd99c5f>
+            rdf:type                   cim:SubGeographicalRegion;
+            cim:IdentifiedObject.description
+                    "NO2 Bidding Zone";
+            cim:IdentifiedObject.mRID  "f176965f-9aeb-11e5-91da-b8763fd99c5f";
+            cim:IdentifiedObject.name  "NO2 SGR";
+            cim:SubGeographicalRegion.Region
+                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
+    
+    <urn:uuid:f1769699-9aeb-11e5-91da-b8763fd99c5f>
+            rdf:type                   cim:SubGeographicalRegion;
+            cim:IdentifiedObject.description
+                    "NO3 Bidding Zone";
+            cim:IdentifiedObject.mRID  "f1769699-9aeb-11e5-91da-b8763fd99c5f";
+            cim:IdentifiedObject.name  "NO3 SGR";
+            cim:SubGeographicalRegion.Region
+                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
+    
+    <urn:uuid:f17695c3-9aeb-11e5-91da-b8763fd99c5f>
+            rdf:type                   cim:SubGeographicalRegion;
+            cim:IdentifiedObject.description
+                    "SE2 Bidding Zone";
+            cim:IdentifiedObject.mRID  "f17695c3-9aeb-11e5-91da-b8763fd99c5f";
+            cim:IdentifiedObject.name  "SE2 SGR";
+            cim:SubGeographicalRegion.Region
+                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
+    
+    <urn:uuid:f17696cf-9aeb-11e5-91da-b8763fd99c5f>
+            rdf:type                   cim:SubGeographicalRegion;
+            cim:IdentifiedObject.description
+                    "SE4 Bidding Zone";
+            cim:IdentifiedObject.mRID  "f17696cf-9aeb-11e5-91da-b8763fd99c5f";
+            cim:IdentifiedObject.name  "SE4 SGR";
+            cim:SubGeographicalRegion.Region
+                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
+    
+    <urn:uuid:f17695af-9aeb-11e5-91da-b8763fd99c5f>
+            rdf:type                   cim:SubGeographicalRegion;
+            cim:IdentifiedObject.description
+                    "SE3 Bidding Zone";
+            cim:IdentifiedObject.mRID  "f17695af-9aeb-11e5-91da-b8763fd99c5f";
+            cim:IdentifiedObject.name  "SE3 SGR";
+            cim:SubGeographicalRegion.Region
+                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
+    
+    <urn:uuid:f1769609-9aeb-11e5-91da-b8763fd99c5f>
+            rdf:type                   cim:SubGeographicalRegion;
+            cim:IdentifiedObject.description
+                    "NO1 Bidding Zone";
+            cim:IdentifiedObject.mRID  "f1769609-9aeb-11e5-91da-b8763fd99c5f";
+            cim:IdentifiedObject.name  "NO1 SGR";
+            cim:SubGeographicalRegion.Region
+                    <urn:uuid:2dd9048c-bdfb-11e5-94fa-c8f73332c8f4> .
 }
